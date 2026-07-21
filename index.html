@@ -530,6 +530,19 @@
       transform: translateY(-2px);
     }
 
+    .languages {
+      margin-top: 20px;
+    }
+
+    .languages-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--teal-dim);
+      margin-bottom: 10px;
+    }
+
     /* TIMELINE */
     .timeline {
       border-left: 2px solid var(--paper-line);
@@ -782,6 +795,72 @@
     .slider-dot.active {
       background: var(--teal-dim);
       transform: scale(1.4);
+    }
+
+    /* RESOURCE */
+    .resources-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    @media(max-width:800px) {
+      .resources-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .resource-card {
+      background: var(--white);
+      border: 1px solid var(--paper-line);
+      border-radius: 8px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+    }
+
+    .resource-card:hover {
+      border-color: var(--teal-dim);
+      box-shadow: 0 18px 36px rgba(11, 37, 69, .1);
+      transform: translateY(-4px);
+    }
+
+    @media(max-width:640px) {
+      .resource-card {
+        padding: 24px;
+      }
+    }
+
+    .resource-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: var(--amber);
+      margin-bottom: 12px;
+    }
+
+    .resource-card h3 {
+      font-size: 1.15rem;
+      line-height: 1.32;
+      margin-bottom: 8px;
+    }
+
+    .resource-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      color: var(--teal-dim);
+      margin-bottom: 14px;
+    }
+
+    .resource-card>p {
+      color: var(--muted);
+      margin-bottom: 22px;
+      flex-grow: 1;
+    }
+
+    .resource-card .btn {
+      align-self: flex-start;
     }
 
     /* CERTS */
@@ -1077,6 +1156,7 @@
         <a href="#journey">Journey</a>
         <a href="#impact">Impact</a>
         <a href="#highlights">Highlights</a>
+        <a href="#resource">Resource</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </div>
@@ -1091,6 +1171,7 @@
     <a href="#journey">Journey</a>
     <a href="#impact">Impact</a>
     <a href="#highlights">Highlights</a>
+    <a href="#resource">Resource</a>
     <a href="#skills">Skills</a>
     <a href="#vision">Vision</a>
     <a href="#contact">Contact</a>
@@ -1162,6 +1243,13 @@
             <span class="tag">4-Subject Fluency</span>
             <span class="tag">Based in Sheikhupura, PK</span>
           </div>
+          <div class="languages">
+            <div class="languages-label">Languages</div>
+            <div class="credential-tags">
+              <span class="tag">English — Professional Fluency</span>
+              <span class="tag">Urdu — Native</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1198,7 +1286,7 @@
           <div class="tl-date">Jun 2025 — Present</div>
           <h3>Lead Educator</h3>
           <p>ACE Education Academy, Sheikhupura</p>
-          <div class="tl-meta">Classes 6–10 · Science, Biology, Chemistry, Computer Science</div>
+          <div class="tl-meta">Classes 6–10 · Science, Computer Science</div>
         </div>
       </div>
     </div>
@@ -1257,8 +1345,8 @@
             <div class="slide">
               <div class="slide-card">
                 <div class="slide-num">HIGHLIGHT 02</div>
-                <h3>Four Subjects, One Classroom</h3>
-                <p>Currently teaching Science, Biology, Chemistry, and Computer Science to Classes 6–10 at
+                <h3>Science & Computer Science Subjects, One Classroom</h3>
+                <p>Currently teaching Science and Computer Science to Classes 6–10 at
                   ACE Education Academy.</p>
               </div>
             </div>
@@ -1299,10 +1387,59 @@
     </div>
   </section>
 
-  <section id="certifications" class="blueprint">
+  <section id="resource">
     <div class="wrap">
       <div class="section-head reveal">
         <div class="section-num">05</div>
+        <h2>Teaching Resources</h2>
+        <p>Four lesson plans from my classroom, shared here as work samples — clear objectives, real
+          classroom activities, and built-in assessment.</p>
+      </div>
+      <div class="resources-grid">
+        <div class="resource-card reveal">
+          <div class="resource-tag">PDF · LESSON PLAN</div>
+          <h3>Photosynthesis: The Solar-Powered Kitchen</h3>
+          <div class="resource-meta">Science · Class 8 · 45-Minute Lesson · Cambridge / National</div>
+          <p>A memorable hook and analogy, three-tier differentiation, a labelled leaf cross-section
+            diagram, and a full student worksheet.</p>
+          <a href="Photosynthesis_Lesson_Plan_Class8.pdf" target="_blank" rel="noopener"
+            class="btn btn-primary magnetic">Download PDF</a>
+        </div>
+        <div class="resource-card reveal">
+          <div class="resource-tag">PDF · CHEMISTRY</div>
+          <h3>The Chemistry of Human-Caused Climate Change</h3>
+          <div class="resource-meta">Science · Class 6–8 · Double Period</div>
+          <p>Combustion chemistry through to the molecular basis of the greenhouse effect, radiative
+            forcing, and an ocean-acidification extension for advanced students.</p>
+          <a href="Climate_Change_Chemistry_Lesson.pdf" target="_blank" rel="noopener"
+            class="btn btn-primary magnetic">Download PDF</a>
+        </div>
+        <div class="resource-card reveal">
+          <div class="resource-tag">PDF · UNIT PLAN</div>
+          <h3>Chemical Bonding: Ionic and Covalent Bonds</h3>
+          <div class="resource-meta">Chemistry · Class 8 · 3-Lesson Unit</div>
+          <p>A three-lesson unit moving from the octet rule through ionic and covalent bonding to a
+            properties comparison and summative quiz, with dot-and-cross diagrams throughout.</p>
+          <a href="Chemical_Bonding_Unit_Plan.pdf" target="_blank" rel="noopener"
+            class="btn btn-primary magnetic">Download PDF</a>
+        </div>
+        <div class="resource-card reveal">
+          <div class="resource-tag">PDF · PHYSICS</div>
+          <h3>Series &amp; Parallel Circuits: House Wiring</h3>
+          <div class="resource-meta">Science · Class 8 · 40–45 Min</div>
+          <p>From Ohm's Law to why household wiring is parallel, with worked circuit diagrams and an
+            8-question worksheet spanning conceptual, numerical, and extended-response items.</p>
+          <a href="Series_Parallel_Circuits_Lesson.pdf" target="_blank" rel="noopener"
+            class="btn btn-primary magnetic">Download PDF</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" class="blueprint">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-num">06</div>
         <h2>Certifications & Registration</h2>
       </div>
       <div class="certs-grid">
@@ -1324,7 +1461,7 @@
   <section id="skills">
     <div class="wrap">
       <div class="section-head reveal">
-        <div class="section-num">06</div>
+        <div class="section-num">07</div>
         <h2>Skills & Qualities</h2>
       </div>
       <div class="skills-cols">
@@ -1381,7 +1518,7 @@
   <section id="contact" class="blueprint">
     <div class="wrap">
       <div class="section-head reveal">
-        <div class="section-num">07</div>
+        <div class="section-num">08</div>
         <h2>Get in touch</h2>
         <p>Open to conversations about Science and ICT teaching roles in international schools.</p>
       </div>
